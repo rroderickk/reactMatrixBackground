@@ -1,6 +1,8 @@
 # The React component with vanilla HTML5 canvas (using hooks)
 
 ![screenshot](screenshot.gif)
+## For change the theme change your branch all console my friend
+![screenshot](rightyellow.gif)
 
 The text falls in columns each of 20px wide.
 
@@ -23,3 +25,10 @@ Also we randomly reset some columns to start from the top again.
 For the rest of the columns the y coordinate will be moved 20px down, so that in next frame a new character appears below the current one.
 
 # cambiando de branch cambias el efecto.
+
+#### gcy
+alias gcy=git checkout rightYellow
+![screenshot](rightyellowTrim.jpg)
+
+#### gco
+alias gco=git checkout original = para volver al original 
