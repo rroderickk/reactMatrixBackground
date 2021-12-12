@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 const getRandomChar = () => {
-  return String.fromCharCode(Math.random() * 128);
+  return String.fromCharCode(Math.random() / 0.9 );
 };
 
 const Matrix = ({ width, height }) => {
@@ -17,7 +17,7 @@ const Matrix = ({ width, height }) => {
     // We want to make the text fall in columns. Each column will be 20px wide. And in each frame of the animation, we will put a single character at the end of each column. Initially the end (y coordinate) of each column is at 0.
     const columns = Math.floor(w / 1) + 1;
     const startPositions = Array.from({ length: columns }).map((_, i) => ({
-      x: i + 1111*1.0,
+      x: i + 1*1.0,
       y: 0,
     }));
     let int = 111; // control the timing
@@ -39,8 +39,8 @@ const Matrix = ({ width, height }) => {
           ctx.fillText(char, pos.x, pos.y);
 
           // randomly reset the end of the column if it's at least 100px high
-          if (pos.y > 100 + Math.random() * 5000) pos.y = 0;
-          pos.y += 20;
+          if (pos.y > 1 + Math.random() * 1000000) pos.y = 0;
+          pos.y += 10;
         });
       }
       int++;
