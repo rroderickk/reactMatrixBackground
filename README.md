@@ -26,9 +26,14 @@ For the rest of the columns the y coordinate will be moved 20px down, so that in
 
 # cambiando de branch cambias el efecto.
 
-#### gcy
+#### g c o
+alias gco=git checkout original = para volver al original 
+#### g c y
 alias gcy=git checkout rightYellow
 ![screenshot](rightyellowTrim.jpg)
 
-#### gco
-alias gco=git checkout original = para volver al original 
+#### g c l 1
+![screenshot](gcl1.png)
+
+#### g c l 2
+![screenshot](gcl2.png)
