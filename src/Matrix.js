@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 const getRandomChar = () => {
-  return String.fromCharCode(Math.random() / 0.9 );
+  return String.fromCharCode(Math.random() * 128 );
 };
 
 const Matrix = ({ width, height }) => {
@@ -15,31 +15,31 @@ const Matrix = ({ width, height }) => {
     let requestId = null;
 
     // We want to make the text fall in columns. Each column will be 20px wide. And in each frame of the animation, we will put a single character at the end of each column. Initially the end (y coordinate) of each column is at 0.
-    const columns = Math.floor(w / 1) + 1;
+    const columns = Math.floor(w * 0.09) + 1;
     const startPositions = Array.from({ length: columns }).map((_, i) => ({
-      x: i + 1*1.0,
+      x: i + 999*1.0,
       y: 0,
     }));
-    let int = 111; // control the timing
+    let int = 1111; // control the timing
     const ctx = canvas.getContext("2d");
 
     ctx.fillStyle = "#909";
-    ctx.fillRect(0, 0, w, h);
+    ctx.fillRect(0, 0, w*1, h);
 
     const matrix = () => {
       requestId = requestAnimationFrame(matrix);
-      if (int % 2 === 0) {
+      if (int % 1 === 0) {
         ctx.fillStyle = "#0011";
-        ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = "#9f0";
-        ctx.font = "20pt Consolas";
+        ctx.fillRect(0, 0, w*1, h*1);
+        ctx.fillStyle = "#ff0000";
+        ctx.font = "90pt Consolas";
 
         startPositions.forEach(pos => {
           const char = getRandomChar();
           ctx.fillText(char, pos.x, pos.y);
 
           // randomly reset the end of the column if it's at least 100px high
-          if (pos.y > 1 + Math.random() * 1000000) pos.y = 0;
+          if (pos.y > 2 + Math.random() * 1000000) pos.y = 0;
           pos.y += 10;
         });
       }
