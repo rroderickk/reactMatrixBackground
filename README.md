@@ -37,3 +37,6 @@ alias gcy=git checkout rightYellow
 
 #### g c l 2
 ![screenshot](gcl2.png)
+
+#### g c l 3
+![screenshot](gcl3.png)
