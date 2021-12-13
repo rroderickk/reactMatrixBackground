@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 const getRandomChar = () => {
-  return String.fromCharCode(Math.random() / 0.9 );
+  return String.fromCharCode(Math.random() / 0.01 );
 };
 
 const Matrix = ({ width, height }) => {
@@ -15,7 +15,7 @@ const Matrix = ({ width, height }) => {
     let requestId = null;
 
     // We want to make the text fall in columns. Each column will be 20px wide. And in each frame of the animation, we will put a single character at the end of each column. Initially the end (y coordinate) of each column is at 0.
-    const columns = Math.floor(w / 1) + 1;
+    const columns = Math.floor(w / 1) + 0.1;
     const startPositions = Array.from({ length: columns }).map((_, i) => ({
       x: i + 1*1.0,
       y: 0,
@@ -29,7 +29,7 @@ const Matrix = ({ width, height }) => {
     const matrix = () => {
       requestId = requestAnimationFrame(matrix);
       if (int % 2 === 0) {
-        ctx.fillStyle = "#0011";
+        ctx.fillStyle = "#0011"; 
         ctx.fillRect(0, 0, w, h);
         ctx.fillStyle = "#9f0";
         ctx.font = "20pt Consolas";
