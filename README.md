@@ -30,13 +30,16 @@ For the rest of the columns the y coordinate will be moved 20px down, so that in
 alias gco=git checkout original = para volver al original 
 #### g c y
 alias gcy=git checkout rightYellow
-![screenshot](rightyellowTrim.jpg)
+![screenshot](/theme/rightyellowTrim.jpg)
 
 #### g c l 1
-![screenshot](gcl1.png)
+![screenshot](/theme/gcl1.png)
 
 #### g c l 2
-![screenshot](gcl2.png)
+![screenshot](/theme/gcl2.png)
 
 #### g c l 3
-![screenshot](gcl3.png)
+![screenshot](/theme/gcl3.png)
+
+#### g c l 4
+![screenshot](/theme/gcl4.jpg)
