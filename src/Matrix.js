@@ -29,17 +29,17 @@ const Matrix = ({ width, height }) => {
     const matrix = () => {
       requestId = requestAnimationFrame(matrix);
       if (int % 2 === 0) {
-        ctx.fillStyle ="#fff9"; 
+        ctx.fillStyle ="#282c10";
         ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = "#ba2313";
-        ctx.font = "40pt ";
+        ctx.fillStyle = "purple";
+        ctx.font = "40pt Consolas";
 
         startPositions.forEach(pos => {
           const char = getRandomChar();
           ctx.fillText(char, pos.x, pos.y);
 
           // randomly reset the end of the column if it's at least 100px high
-          if (pos.y > 1 + Math.random() * 1000000) pos.y = 0;
+          if (pos.y > 1 + Math.random() * 9000000) pos.y = 0;
           pos.y += 10;
         });
       }
