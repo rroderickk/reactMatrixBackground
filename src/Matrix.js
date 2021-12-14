@@ -29,10 +29,10 @@ const Matrix = ({ width, height }) => {
     const matrix = () => {
       requestId = requestAnimationFrame(matrix);
       if (int % 2 === 0) {
-        ctx.fillStyle = "#0011"; 
+        ctx.fillStyle ="#fff9"; 
         ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = "#9f0";
-        ctx.font = "20pt Consolas";
+        ctx.fillStyle = "#ba2313";
+        ctx.font = "40pt ";
 
         startPositions.forEach(pos => {
           const char = getRandomChar();
