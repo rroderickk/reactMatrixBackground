@@ -43,3 +43,6 @@ alias gcy=git checkout rightYellow
 
 #### g c l 4
 ![screenshot](/theme/gcl4.jpg)
+
+#### g c l 5
+![screenshot](/theme/gcl5.png)
