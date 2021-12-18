@@ -1,8 +1,8 @@
 # The React component with vanilla HTML5 canvas (using hooks)
 
-![screenshot](screenshot.gif)
+![screenshot](/theme/screenshot.gif)
 ## For change the theme change your branch all console my friend
-![screenshot](rightyellow.gif)
+![screenshot](/theme/rightyellow.gif)
 
 The text falls in columns each of 20px wide.
 
@@ -46,3 +46,10 @@ alias gcy=git checkout rightYellow
 
 #### g c l 5
 ![screenshot](/theme/gcl5.png)
+
+#### g c l 6
+![screenshot](/theme/gcl6.png)
+#### g c l 7
+![screenshot](/theme/gcl7.png)
+#### g c l 8
+![screenshot](/theme/gcl8.png)
