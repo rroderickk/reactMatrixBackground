@@ -23,16 +23,16 @@ const Matrix = ({ width, height }) => {
     let int = 0; // control the timing
     const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = "#000";
+    ctx.fillStyle = "9f0";
     ctx.fillRect(0, 0, w, h);
 
     const matrix = () => {
       requestId = requestAnimationFrame(matrix);
       if (int % 2 === 0) {
-        ctx.fillStyle = "#101";
+        ctx.fillStyle = "#000";
         ctx.fillRect(0, 0, w, h);
         ctx.fillStyle = "#9f0";
-        ctx.font = "42pt monospace";
+        ctx.font = "244pt monospace";
 
         startPositions.forEach(pos => {
           const char = getRandomChar();
@@ -40,7 +40,7 @@ const Matrix = ({ width, height }) => {
 
           // randomly reset the end of the column if it's at least 100px high
           if (pos.y > 100 + Math.random() * 5000) pos.y = 0;
-          pos.y += 20;
+          pos.y += 30;
         });
       }
       int++;
