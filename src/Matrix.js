@@ -31,7 +31,7 @@ const Matrix = ({ width, height }) => {
       if (int % 2 === 0) {
         ctx.fillStyle = "#0001";
         ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = "#0f0";
+        ctx.fillStyle = "#9f9";
         ctx.font = "14pt monospace";
 
         startPositions.forEach(pos => {
