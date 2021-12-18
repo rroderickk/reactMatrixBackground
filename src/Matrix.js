@@ -17,7 +17,7 @@ const Matrix = ({ width, height }) => {
     // We want to make the text fall in columns. Each column will be 20px wide. And in each frame of the animation, we will put a single character at the end of each column. Initially the end (y coordinate) of each column is at 0.
     const columns = Math.floor(w / 20) + 1;
     const startPositions = Array.from({ length: columns }).map((_, i) => ({
-      x: i * 20,
+      x: i * 420,
       y: 0,
     }));
     let int = 0; // control the timing
@@ -29,10 +29,10 @@ const Matrix = ({ width, height }) => {
     const matrix = () => {
       requestId = requestAnimationFrame(matrix);
       if (int % 2 === 0) {
-        ctx.fillStyle = "#0001";
+        ctx.fillStyle = "#101";
         ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = "#9f9";
-        ctx.font = "14pt monospace";
+        ctx.fillStyle = "#9f0";
+        ctx.font = "42pt monospace";
 
         startPositions.forEach(pos => {
           const char = getRandomChar();
